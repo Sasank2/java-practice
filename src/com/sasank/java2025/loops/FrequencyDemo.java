@@ -17,7 +17,7 @@ public class FrequencyDemo {
     public static void main(String[] args) {
 
         int[] numbers = {2, 3, 4, 6, 7, 4, 8, 4, 3};
-        int target = 3;
+        int target = 4;
 
         int result = countFrequency(numbers, target);
 
