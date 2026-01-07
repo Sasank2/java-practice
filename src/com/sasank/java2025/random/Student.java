@@ -1,17 +1,33 @@
 package com.sasank.java2025.random;
-
+import java.util.Scanner;
 public class Student {
 	
-	int id;
-	String name;
-	int maths,physics,chemistry;
+	private int id;
+	private String name;
+	private int maths,physics,chemistry;
 	
-	public Student(int id, String name, int maths, int physics, int chemistry) {
-		this.id = id;
-		this.name = name;
-		this.chemistry = chemistry;
-		this.maths = maths;
-		this.physics = physics;
+//	public Student(int id, String name, int maths, int physics, int chemistry) {
+//		this.id = id;
+//		this.name = name;
+//		this.chemistry = chemistry;
+//		this.maths = maths;
+//		this.physics = physics;
+//	}
+	public Student() {
+	}
+	public void readInput() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter id : ");
+		int id = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter name : ");
+		String name = sc.nextLine();
+		System.out.println("Enter maths : ");
+		int maths = sc.nextInt();
+		System.out.println("Enter physics : ");
+		int physics = sc.nextInt();
+		System.out.println("Enter chemistry : ");
+		int chemistry = sc.nextInt();
 	}
 	
 	public double calculateTotal() {
@@ -21,7 +37,7 @@ public class Student {
 	
 	public double calculateAverage() {
 		
-		return calculateTotal()/3;
+		return calculateTotal()/3.0;
 	}
 	
 	public void displayResult() {
@@ -37,9 +53,22 @@ public class Student {
 
 	public static void main(String[] args) {
 		
-		Student s = new Student(1,"Simba",10, 10, 6);
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter id : ");
+//		int id = sc.nextInt();
+//		sc.nextLine();
+//		System.out.println("Enter name : ");
+//		String name = sc.nextLine();
+//		System.out.println("Enter maths : ");
+//		int maths = sc.nextInt();
+//		System.out.println("Enter physics : ");
+//		int physics = sc.nextInt();
+//		System.out.println("Enter chemistry : ");
+//		int chemistry = sc.nextInt();
+	
+		Student s = new Student();
+		s.readInput();
 		s.displayResult();
-		
 	}
 
 }
