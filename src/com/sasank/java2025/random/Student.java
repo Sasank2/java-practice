@@ -42,6 +42,33 @@ public class Student {
 		return grade;
 	}
 	
+	public void  readInput(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter id : ");
+		this.id = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter name : ");
+		this.name = sc.nextLine();
+		System.out.println("Enter maths : ");
+		this.maths = sc.nextInt();
+		System.out.println("Enter physics : ");
+		this.physics = sc.nextInt();
+		System.out.println("Enter chemistry : ");
+		this.chemistry = sc.nextInt();
+	}
+	public char calculateGrade() {
+		char grade = 0;
+		double Avg = calculateAverage();
+		if(Avg >= 90) {
+			grade = 'A';
+		}else if(Avg < 90 && Avg >= 70) {
+			grade = 'B';
+		}else if(Avg < 70) {
+			grade = 'F';
+		}
+		return grade;
+	}
+	
 	public void displayResult() {
 		
 		readInput();
@@ -52,7 +79,7 @@ public class Student {
 		System.out.println("physics = " + physics);
 		System.out.println("Total = " + calculateTotal());
 		System.out.println("Average = " + calculateAverage());
-		System.out.println("Average = " + calculateGrade());
+		System.out.println("Grade = " + calculateGrade());
 	}
 
 	public static void main(String[] args) {
