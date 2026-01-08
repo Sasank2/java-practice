@@ -40,6 +40,36 @@ public class Student {
 		return calculateTotal()/3.0;
 	}
 	
+<<<<<<< HEAD
+=======
+	public void  readInput(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter id : ");
+		this.id = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter name : ");
+		this.name = sc.nextLine();
+		System.out.println("Enter maths : ");
+		this.maths = sc.nextInt();
+		System.out.println("Enter physics : ");
+		this.physics = sc.nextInt();
+		System.out.println("Enter chemistry : ");
+		this.chemistry = sc.nextInt();
+	}
+	public char calculateGrade() {
+		char grade = 0;
+		double Avg = calculateAverage();
+		if(Avg >= 90) {
+			grade = 'A';
+		}else if(Avg < 90 && Avg >= 70) {
+			grade = 'B';
+		}else if(Avg < 70) {
+			grade = 'F';
+		}
+		return grade;
+	}
+	
+>>>>>>> 990274a ( Fix grade calculation and improve output labels)
 	public void displayResult() {
 		
 		System.out.println("id = " + id);
@@ -49,6 +79,10 @@ public class Student {
 		System.out.println("physics = " + physics);
 		System.out.println("Total = " + calculateTotal());
 		System.out.println("Average = " + calculateAverage());
+<<<<<<< HEAD
+=======
+		System.out.println("Grade = " + calculateGrade());
+>>>>>>> 990274a ( Fix grade calculation and improve output labels)
 	}
 
 	public static void main(String[] args) {
@@ -67,7 +101,11 @@ public class Student {
 //		int chemistry = sc.nextInt();
 	
 		Student s = new Student();
+<<<<<<< HEAD
 		s.readInput();
+=======
+		
+>>>>>>> 990274a ( Fix grade calculation and improve output labels)
 		s.displayResult();
 	}
 
