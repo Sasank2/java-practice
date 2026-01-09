@@ -15,7 +15,16 @@ public class Student {
 		
 		return calculateTotal()/3.0;
 	}
+<<<<<<< Updated upstream
 
+=======
+	
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 	public void  readInput(){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter id : ");
@@ -32,17 +41,32 @@ public class Student {
 	}
 	public char calculateGrade() {
 		char grade = 0;
+<<<<<<< HEAD
 		double Avg = calculateAverage();
 		if(Avg >= 90) {
 			grade = 'A';
 		}else if(Avg < 90 && Avg >= 70) {
 			grade = 'B';
 		}else if(Avg < 70) {
+=======
+		if(calculateAverage() >= 90) {
+			grade = 'A';
+		}else if(calculateAverage() < 90 || calculateAverage() >= 70) {
+			grade = 'B';
+		}else if(calculateAverage() < 70) {
+>>>>>>> origin/master
 			grade = 'F';
 		}
 		return grade;
 	}
 	
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> 990274a ( Fix grade calculation and improve output labels)
+=======
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 	public void displayResult() {
 		
 		readInput();
@@ -53,11 +77,33 @@ public class Student {
 		System.out.println("physics = " + physics);
 		System.out.println("Total = " + calculateTotal());
 		System.out.println("Average = " + calculateAverage());
+<<<<<<< Updated upstream
 		System.out.println("Grade = " + calculateGrade());
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		System.out.println("Grade = " + calculateGrade());
+>>>>>>> 990274a ( Fix grade calculation and improve output labels)
+=======
+		System.out.println("Average = " + calculateGrade());
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 	}
 
 	public static void main(String[] args) {
 		Student s = new Student();
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+		s.readInput();
+=======
+		
+>>>>>>> 990274a ( Fix grade calculation and improve output labels)
+=======
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 		s.displayResult();
 	}
 
