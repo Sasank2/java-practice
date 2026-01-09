@@ -15,33 +15,7 @@ public class Student {
 		
 		return calculateTotal()/3.0;
 	}
-	
-	public void  readInput(){
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter id : ");
-		this.id = sc.nextInt();
-		sc.nextLine();
-		System.out.println("Enter name : ");
-		this.name = sc.nextLine();
-		System.out.println("Enter maths : ");
-		this.maths = sc.nextInt();
-		System.out.println("Enter physics : ");
-		this.physics = sc.nextInt();
-		System.out.println("Enter chemistry : ");
-		this.chemistry = sc.nextInt();
-	}
-	public char calculateGrade() {
-		char grade = 0;
-		if(calculateAverage() >= 90) {
-			grade = 'A';
-		}else if(calculateAverage() < 90 || calculateAverage() >= 70) {
-			grade = 'B';
-		}else if(calculateAverage() < 70) {
-			grade = 'F';
-		}
-		return grade;
-	}
-	
+
 	public void  readInput(){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter id : ");
